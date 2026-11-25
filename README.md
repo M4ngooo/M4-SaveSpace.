@@ -1,5 +1,14 @@
-# M4-SaveSpace. by M4ngo
+## M4-SaveSpace. by M4ngo
 
+## 📸 Preview
+
+![Preview](1W.png)
+![Preview](2W.png)
+![Preview](3W.png)
+![Preview](4W.png)
+![Preview](5W.png)
+![Preview](6W.png)
+![Preview](72.png)
 
 ## Szybki start (Windows)
 
