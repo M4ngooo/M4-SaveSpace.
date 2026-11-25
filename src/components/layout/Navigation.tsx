@@ -23,7 +23,7 @@ export function Sidebar() {
             <span className="text-accent text-lg">💰</span>
           </div>
           <div>
-            <h1 className="font-bold text-text text-sm leading-tight">Oszczędności</h1>
+            <h1 className="font-bold text-text text-sm leading-tight">M4-SaveSpace</h1>
             <p className="text-text-muted text-xs">Cele finansowe</p>
           </div>
         </div>
