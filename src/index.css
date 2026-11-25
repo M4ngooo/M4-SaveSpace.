@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0B0F0D;
+  --color-bg-secondary: #111916;
+  --color-card: #151C18;
+  --color-card-hover: #1A221E;
+  --color-border: #1F2A24;
+  --color-border-light: #2A3830;
+  --color-text: #F0F4F2;
+  --color-text-secondary: #9CA89F;
+  --color-text-muted: #6B7A72;
+  --color-accent: #22C55E;
+  --color-accent-hover: #16A34A;
+  --color-accent-muted: #22C55E20;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px var(--glow-accent, rgba(34, 197, 94, 0.15));
+}
+
+.glow-accent-strong {
+  box-shadow: 0 0 30px var(--glow-accent, rgba(34, 197, 94, 0.3));
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--color-card) 82%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.shimmer {
+  animation: shimmer 1.5s infinite linear;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-muted);
+}
+
+.auth-input::placeholder {
+  color: var(--color-text-muted);
+}
